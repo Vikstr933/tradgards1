@@ -1,0 +1,537 @@
+/* ===================================
+   ABOUT SECTION STYLES
+   Malmö Trädgårdsanläggning
+   =================================== */
+
+/* About Section Container */
+.about {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 50%, var(--white) 100%);
+  overflow: hidden
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gray-200) 50%,
+    transparent 100%
+  )
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%
+}
+
+/* ===================================
+   SECTION HEADER
+   =================================== */
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease-out
+}
+
+.about-label {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2)
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6
+}
+
+/* ===================================
+   ABOUT CONTENT
+   =================================== */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem
+}
+
+.about-text {
+  animation: fadeInLeft 0.8s ease-out
+}
+
+.about-content-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem
+}
+
+.about-description:last-child {
+  margin-bottom: 0
+}
+
+/* ===================================
+   STATISTICS GRID
+   =================================== */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  animation: fadeInRight 0.8s ease-out
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid var(--gray-200);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 24px rgba(45, 80, 22, 0.15);
+  background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%)
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.2) rotate(10deg)
+}
+
+.stat-card:hover .stat-value {
+  color: var(--primary)
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  transition: color 0.3s ease
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em
+}
+
+/* ===================================
+   WHY CHOOSE US SECTION
+   =================================== */
+
+.why-choose-us {
+  margin-bottom: 5rem
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out
+}
+
+.why-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2
+}
+
+.why-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6
+}
+
+/* Reasons Grid */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both
+}
+
+.reason-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--gray-200);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+}
+
+.reason-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 32px rgba(45, 80, 22, 0.15);
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%)
+}
+
+.reason-card:hover .reason-icon {
+  transform: scale(1.2) rotate(10deg);
+  background: linear-gradient(135deg, var(--primary), var(--secondary))
+}
+
+.reason-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2)
+}
+
+.reason-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.3
+}
+
+.reason-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7
+}
+
+/* ===================================
+   CALL TO ACTION
+   =================================== */
+
+.about-cta {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(45, 80, 22, 0.3);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  position: relative;
+  overflow: hidden
+}
+
+.about-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: ctaGlow 8s ease-in-out infinite
+}
+
+@keyframes ctaGlow {
+  0%, 100% {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(20%, 20%)
+  }
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 1
+}
+
+.about-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.2
+}
+
+.about-cta-text {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6
+}
+
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  background: var(--white);
+  color: var(--primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em
+}
+
+.about-cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  background: var(--gray-50)
+}
+
+.about-cta-button:active {
+  transform: translateY(-2px)
+}
+
+.button-arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease
+}
+
+.about-cta-button:hover .button-arrow {
+  transform: translateX(8px)
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: start
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 8rem 2rem
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding: 4rem 1.5rem
+  }
+
+  .about-title {
+    font-size: 2.25rem
+  }
+
+  .about-subtitle {
+    font-size: 1.125rem
+  }
+
+  .about-content-title {
+    font-size: 1.75rem
+  }
+
+  .about-description {
+    font-size: 1rem
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr
+  }
+
+  .stat-value {
+    font-size: 2.5rem
+  }
+
+  .why-title {
+    font-size: 2rem
+  }
+
+  .why-subtitle {
+    font-size: 1rem
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem
+  }
+
+  .reason-card {
+    padding: 2rem 1.5rem
+  }
+
+  .about-cta {
+    padding: 3rem 2rem
+  }
+
+  .about-cta-title {
+    font-size: 2rem
+  }
+
+  .about-cta-text {
+    font-size: 1.125rem
+  }
+
+  .about-cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem
+  }
+
+  .about-title {
+    font-size: 2rem
+  }
+
+  .about-subtitle {
+    font-size: 1rem
+  }
+
+  .about-content-title {
+    font-size: 1.5rem
+  }
+
+  .stat-card {
+    padding: 1.5rem
+  }
+
+  .stat-icon {
+    font-size: 2.5rem
+  }
+
+  .stat-value {
+    font-size: 2rem
+  }
+
+  .reason-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem
+  }
+
+  .reason-title {
+    font-size: 1.25rem
+  }
+
+  .about-cta {
+    padding: 2.5rem 1.5rem
+  }
+
+  .about-cta-title {
+    font-size: 1.75rem
+  }
+
+  .about-cta-text {
+    font-size: 1rem
+  }
+
+  .about-cta-button {
+    width: 100%;
+    justify-content: center
+  }
+}
