@@ -1,0 +1,425 @@
+/* ===================================
+   APP COMPONENT STYLES
+   Malmö Trädgårdsanläggning
+   Main Application Layout & Navigation
+   =================================== */
+
+/* ===================================
+   APP CONTAINER
+   =================================== */
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--white)
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  z-index: 1
+}
+
+/* ===================================
+   NAVIGATION BAR
+   =================================== */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0
+}
+
+.navigation-scrolled {
+  background: rgba(45, 80, 22, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem 0
+}
+
+.navigation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem
+}
+
+/* ===================================
+   NAVIGATION LOGO
+   =================================== */
+
+.navigation-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.2s ease
+}
+
+.navigation-logo:hover {
+  transform: translateY(-2px)
+}
+
+.logo-icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  white-space: nowrap
+}
+
+/* ===================================
+   NAVIGATION MENU
+   =================================== */
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  white-space: nowrap
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 0.2s ease;
+  border-radius: 2px
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-light)
+}
+
+.nav-link:hover::before {
+  transform: translateX(-50%) scaleX(1)
+}
+
+.nav-link-active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--accent-light)
+}
+
+.nav-link-active::before {
+  transform: translateX(-50%) scaleX(1)
+}
+
+/* ===================================
+   NAVIGATION CTA
+   =================================== */
+
+.navigation-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap
+}
+
+.nav-phone:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+}
+
+.nav-phone-icon {
+  font-size: 1.25rem;
+  line-height: 1
+}
+
+.nav-phone-text {
+  font-size: 1rem;
+  font-weight: 600
+}
+
+.nav-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3)
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4)
+}
+
+.nav-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(124, 179, 66, 0.3)
+}
+
+/* ===================================
+   SCROLL TO TOP BUTTON
+   =================================== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(45, 80, 22, 0.3)
+}
+
+.scroll-to-top-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0)
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(45, 80, 22, 0.4)
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(45, 80, 22, 0.3)
+}
+
+.scroll-to-top-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navigation-container {
+    padding: 0 1.5rem
+  }
+
+  .navigation-menu {
+    gap: 0.25rem
+  }
+
+  .nav-link {
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem
+  }
+
+  .logo-text {
+    font-size: 1.125rem
+  }
+
+  .nav-phone-text {
+    display: none
+  }
+
+  .nav-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navigation {
+    padding: 1rem 0
+  }
+
+  .navigation-scrolled {
+    padding: 0.75rem 0
+  }
+
+  .navigation-container {
+    padding: 0 1rem;
+    gap: 1rem
+  }
+
+  .navigation-menu {
+    display: none
+  }
+
+  .logo-icon {
+    font-size: 1.75rem
+  }
+
+  .logo-text {
+    font-size: 1rem
+  }
+
+  .navigation-cta {
+    gap: 0.5rem
+  }
+
+  .nav-phone {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem
+  }
+
+  .nav-phone-icon {
+    font-size: 1.125rem
+  }
+
+  .nav-button {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem
+  }
+
+  .scroll-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem
+  }
+
+  .scroll-to-top-icon {
+    font-size: 1.25rem
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .navigation-container {
+    padding: 0 0.75rem
+  }
+
+  .logo-text {
+    font-size: 0.875rem
+  }
+
+  .nav-phone {
+    padding: 0.5rem 0.75rem
+  }
+
+  .nav-button {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem
+  }
+
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem
+  }
+
+  .scroll-to-top-icon {
+    font-size: 1.125rem
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation,
+  .nav-link,
+  .nav-phone,
+  .nav-button,
+  .scroll-to-top,
+  .navigation-logo {
+    transition: none
+  }
+
+  .scroll-to-top {
+    animation: none
+  }
+}
+
+/* Focus Styles */
+.nav-link:focus-visible,
+.nav-phone:focus-visible,
+.nav-button:focus-visible,
+.scroll-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .navigation-scrolled {
+    background: var(--primary-dark);
+    border-bottom: 2px solid var(--accent)
+  }
+
+  .nav-link,
+  .nav-phone,
+  .logo-text {
+    color: var(--white)
+  }
+
+  .nav-button {
+    border: 2px solid var(--accent)
+  }
+}
