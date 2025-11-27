@@ -1,0 +1,657 @@
+/* ===================================
+   FOOTER SECTION STYLES
+   Malmö Trädgårdsanläggning
+   =================================== */
+
+/* Footer Container */
+.footer {
+  position: relative;
+  background: linear-gradient(180deg, #1f3810 0%, #2d5016 50%, #1f3810 100%);
+  color: var(--white);
+  overflow: hidden;
+  margin-top: 4rem
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent) 25%,
+    var(--secondary-light) 50%,
+    var(--accent) 75%,
+    transparent 100%
+  );
+  animation: shimmer 3s ease-in-out infinite
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.5
+  }
+  50% {
+    opacity: 1
+  }
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%
+}
+
+/* ===================================
+   FOOTER TOP SECTION
+   =================================== */
+
+.footer-top {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  animation: fadeInUp 0.8s ease-out
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+/* Footer Column */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem
+}
+
+.footer-company {
+  grid-column: span 1
+}
+
+/* ===================================
+   COMPANY INFO SECTION
+   =================================== */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem
+}
+
+.footer-logo-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))
+}
+
+.footer-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0
+}
+
+.footer-certifications {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem
+}
+
+.certification-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease
+}
+
+.certification-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px)
+}
+
+.badge-icon {
+  font-size: 1.1rem
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white)
+}
+
+/* ===================================
+   FOOTER HEADINGS
+   =================================== */
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 0.75rem
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--secondary-light));
+  border-radius: 2px
+}
+
+/* ===================================
+   FOOTER LINKS
+   =================================== */
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: left
+}
+
+.footer-link:hover {
+  color: var(--accent-light);
+  transform: translateX(5px)
+}
+
+.footer-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px
+}
+
+.link-arrow {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease
+}
+
+.footer-link:hover .link-arrow {
+  transform: translateX(3px)
+}
+
+/* ===================================
+   CONTACT INFO SECTION
+   =================================== */
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: var(--white);
+  font-weight: 500
+}
+
+.contact-link {
+  text-decoration: none;
+  transition: color 0.2s ease
+}
+
+.contact-link:hover {
+  color: var(--accent-light)
+}
+
+.contact-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px
+}
+
+/* Opening Hours */
+.footer-hours {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.hours-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px
+}
+
+.hours-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between
+}
+
+/* ===================================
+   FOOTER MIDDLE SECTION - SOCIAL
+   =================================== */
+
+.footer-middle {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.footer-social {
+  text-align: center
+}
+
+.social-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 100px
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
+}
+
+.social-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px
+}
+
+.social-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))
+}
+
+.social-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white)
+}
+
+/* ===================================
+   FOOTER BOTTOM SECTION - COPYRIGHT
+   =================================== */
+
+.footer-bottom {
+  padding: 2rem 0
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap
+}
+
+.legal-link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: inherit
+}
+
+.legal-link:hover {
+  color: var(--accent-light)
+}
+
+.legal-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px
+}
+
+.legal-separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem
+}
+
+/* ===================================
+   DECORATIVE ELEMENTS
+   =================================== */
+
+.footer-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.15
+}
+
+.decoration-leaf {
+  position: absolute;
+  font-size: 3rem;
+  animation: floatLeaf 20s ease-in-out infinite
+}
+
+.decoration-leaf-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s
+}
+
+.decoration-leaf-2 {
+  top: 50%;
+  right: 10%;
+  animation-delay: 7s
+}
+
+.decoration-leaf-3 {
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 14s
+}
+
+@keyframes floatLeaf {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg)
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg)
+  }
+  50% {
+    transform: translateY(0) rotate(0deg)
+  }
+  75% {
+    transform: translateY(-15px) rotate(-5deg)
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem
+  }
+
+  .footer-company {
+    grid-column: span 2
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 3rem 0 2rem
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem
+  }
+
+  .footer-company {
+    grid-column: span 1
+  }
+
+  .footer-logo-text {
+    font-size: 1.1rem
+  }
+
+  .footer-certifications {
+    flex-direction: column
+  }
+
+  .certification-badge {
+    width: 100%;
+    justify-content: center
+  }
+
+  .footer-middle {
+    padding: 2rem 0
+  }
+
+  .social-links {
+    gap: 1rem
+  }
+
+  .social-link {
+    min-width: 80px;
+    padding: 0.75rem 1rem
+  }
+
+  .social-icon {
+    font-size: 1.5rem
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem
+  }
+
+  .footer-legal {
+    justify-content: center
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 1rem
+  }
+
+  .footer-top {
+    padding: 2rem 0 1.5rem
+  }
+
+  .footer-heading {
+    font-size: 1rem
+  }
+
+  .footer-description {
+    font-size: 0.9rem
+  }
+
+  .footer-link,
+  .contact-value {
+    font-size: 0.9rem
+  }
+
+  .social-link {
+    min-width: 70px;
+    padding: 0.6rem 0.8rem
+  }
+
+  .social-icon {
+    font-size: 1.3rem
+  }
+
+  .social-label {
+    font-size: 0.8rem
+  }
+
+  .copyright,
+  .legal-link {
+    font-size: 0.85rem
+  }
+
+  .decoration-leaf {
+    font-size: 2rem
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer::before,
+  .footer-grid,
+  .footer-link,
+  .social-link,
+  .decoration-leaf {
+    animation: none;
+    transition: none
+  }
+
+  .footer-link:hover,
+  .social-link:hover {
+    transform: none
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .footer {
+    background: #000000;
+    border-top: 3px solid #ffffff
+  }
+
+  .footer-link,
+  .contact-value,
+  .legal-link {
+    color: #ffffff
+  }
+
+  .certification-badge,
+  .social-link,
+  .footer-hours {
+    border: 2px solid #ffffff
+  }
+}
+
+/* Print Styles */
+@media print {
+  .footer {
+    background: #ffffff;
+    color: #000000;
+    page-break-inside: avoid
+  }
+
+  .footer-decoration,
+  .social-links {
+    display: none
+  }
+
+  .footer-link,
+  .legal-link {
+    color: #000000
+  }
+}
